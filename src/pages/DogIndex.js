@@ -1,11 +1,11 @@
 import React from "react"
 
-const CatIndex = () => {
+const DogIndex = () => {
   return(
     <>
-       <h1>Cat Index</h1>
+       <h1>Dog Index</h1>
     </>
   )
 }
 
-export default CatIndex
+export default DogIndex
