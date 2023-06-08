@@ -27,3 +27,25 @@ Header bar styling
         <NavbarText>Welcome to Doggy Dates</NavbarText>
       </Navbar>
     </div>
+
+
+ PASS  src/__tests__/NotFound.test.js
+ PASS  src/__tests__/Footer.test.js (5.259 s)
+ PASS  src/__tests__/Home.test.js
+ PASS  src/__tests__/Header.test.js
+
+Test Suites: 4 passed, 4 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        10.176 s
+Ran all test suites related to changed files.
+
+Watch Usage
+ › Press a to run all tests.
+ › Press f to run only failed tests.
+ › Press q to quit watch mode.
+ › Press p to filter by a filename regex pattern.
+ › Press t to filter by a test name regex pattern.
+ › Press Enter to trigger a test run.
+
+
