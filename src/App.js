@@ -19,7 +19,7 @@ const App = () => {
   return(
     <>
       <Header />
-      <h1 class="header">Welcome to DoggyDates </h1>
+      <h1 className="header"></h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dogindex" element={<DogIndex />} />

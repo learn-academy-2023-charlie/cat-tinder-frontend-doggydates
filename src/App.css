@@ -2,3 +2,10 @@
   background-color: brown;
   color: blue;
 }
+.notFoundImg{
+  display: flex;
+  justify-content: center;
+}
+.notFoundPage {
+  text-align: center;
+}
