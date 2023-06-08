@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import React from "react"
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
+  NavbarText
 } from 'reactstrap';
-***
-Header bar styling
+
+const Header = () => {
   return(
     <div>
       <Navbar className="my-2" color="danger" dark>
@@ -26,4 +20,8 @@ Header bar styling
          </Nav>
         <NavbarText>Welcome to Doggy Dates</NavbarText>
       </Navbar>
-    </div>
+    </div>   
+  )
+}
+
+export default Header
