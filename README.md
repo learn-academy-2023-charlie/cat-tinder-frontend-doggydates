@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 ***
 Header bar styling
-  return(
+  return
     <div>
       <Navbar className="my-2" color="danger" dark>
         <NavbarBrand href="/">Doggy Dates</NavbarBrand>
@@ -48,4 +48,31 @@ Watch Usage
  › Press t to filter by a test name regex pattern.
  › Press Enter to trigger a test run.
 
-
+<Card
+  style={{
+    width: '18rem'
+  }}
+  key={index}
+>
+  <img
+    alt={`profile of a dog named ${dog.name}`}
+    src={dog.image}
+  />
+  <CardBody>
+    <CardTitle tag="h5">
+      {dog.name}
+    </CardTitle>
+    <CardSubtitle
+      className="mb-2 text-muted"
+      tag="h6"
+    >
+      {dog.sex}
+    </CardSubtitle>
+    <CardText>
+      Some quick example text to build on the card title and make up the bulk of the card‘s content.
+    </CardText>
+    <Button>
+      Button
+    </Button>
+  </CardBody>
+</Card>
