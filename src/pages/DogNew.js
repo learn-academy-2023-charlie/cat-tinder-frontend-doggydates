@@ -1,9 +1,31 @@
-import React from "react"
-import { Form, FormGroup, Label, Input, Button } from "reactstrap"
+import React, { useState } from "react"
+import { Form, FormGroup, Label, Input, Button, Col } from "reactstrap"
 import { useNavigate } from "react-router-dom"
 
-const DogNew = () => {
-  const [newDog, setNewDog] = useState 
+const DogNew = ({createDog}) => {
+  const [newDog, setNewDog] = useState(
+    {
+      name: "",
+      age: "",
+      breed: "",
+      sex: "",
+      image: ""
+    }
+  )
+
+  const navigate = useNavigate()
+
+  const handleChange = (e) => {
+    // displaying the changes from my user interaction
+    // e.target.name will be telling us which key we are updating
+    // e.target.value will telling us what value it will push into that key
+    setNewDog({ ...newDog, [e.target.name]: e.target.value })
+  }
+
+  const handleClick = () => {
+    createDog(newDog)
+    navigate("/dogindex")
+  }
   return(
     <>
        <h1>Dog New</h1>
@@ -42,6 +64,41 @@ const DogNew = () => {
             />
           </Col>
         </FormGroup>
+        <FormGroup row>
+          <Label
+            for="dog-breed"
+          >
+            Enter Dog Breed
+          </Label>
+          <Col sm={10}>
+            <Input
+              id="dog-breed"
+              name="breed"
+              placeholder="Dog breed"
+              type="text"
+              onChange={handleChange} 
+              value={newDog.breed}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label
+            for="dog-sex"
+          >
+            Enter Dog Sex
+          </Label>
+          <Col sm={10}>
+            <Input
+              id="dog-sex"
+              name="sex"
+              placeholder="Dog sex"
+              type="text"
+              onChange={handleChange} 
+              value={newDog.sex}
+            />
+          </Col>
+        </FormGroup>
+        
 
       </Form>
     </>
