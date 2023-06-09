@@ -9,6 +9,14 @@
 .notFoundPage {
   text-align: center;
 }
+#headerlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 0px 20px;
+  align-items: stretch;
+  justify-content: flex-start
+}
 #home-page{
   justify-content: center;
   display: flex;
@@ -18,7 +26,16 @@
 .card {
   margin: 2rem 0;
 }
-
+#formstyle{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  overflow: scroll;
+}
 #dog-index-card {
   display: flex;
   flex-wrap: wrap;

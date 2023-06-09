@@ -27,8 +27,9 @@ const DogNew = ({createDog}) => {
     navigate("/dogindex")
   }
   return(
-    <>
-       <h1>Dog New</h1>
+    
+      <div id="formstyle">
+      <h1>Add your Paw-Pal</h1>
       <Form>
         <FormGroup row>
           <Label
@@ -36,7 +37,7 @@ const DogNew = ({createDog}) => {
           >
             Enter Dog Name
           </Label>
-          <Col sm={10}>
+          <Col sm={15}>
             <Input
               id="dog-name"
               name="name"
@@ -53,7 +54,7 @@ const DogNew = ({createDog}) => {
           >
             Enter Dog Age
           </Label>
-          <Col sm={10}>
+          <Col sm={15}>
             <Input
               id="dog-age"
               name="age"
@@ -70,7 +71,7 @@ const DogNew = ({createDog}) => {
           >
             Enter Dog Breed
           </Label>
-          <Col sm={10}>
+          <Col sm={15}>
             <Input
               id="dog-breed"
               name="breed"
@@ -87,7 +88,7 @@ const DogNew = ({createDog}) => {
           >
             Enter Dog Sex
           </Label>
-          <Col sm={10}>
+          <Col sm={15}>
             <Input
               id="dog-sex"
               name="sex"
@@ -104,7 +105,7 @@ const DogNew = ({createDog}) => {
           >
             Enter Dog Image
           </Label>
-          <Col sm={10}>
+          <Col sm={15}>
             <Input
               id="dog-image"
               name="image"
@@ -119,7 +120,7 @@ const DogNew = ({createDog}) => {
           Submit
         </Button>
       </Form>
-    </>
+    </div>
   )
 }
 

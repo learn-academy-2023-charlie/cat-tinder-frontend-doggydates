@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return(
     <div>
-      <Navbar className="my-2" color="danger" dark fixed="bottom">
+      <Navbar className="my-2" color="danger" dark >
         <NavbarBrand href="/">Doggy Dates</NavbarBrand>
          <Nav className="me-auto" navbar>
          </Nav>
