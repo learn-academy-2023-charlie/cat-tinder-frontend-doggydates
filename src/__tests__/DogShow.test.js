@@ -8,16 +8,16 @@ describe('<DogShow />', () => {
     render(
       <MemoryRouter initialEntries={["/dogshow/1"]}>
         <Routes>
-         <Route path="/dogshow/:id" element={<DogShow dogs={mockDogs}/>}/>
+          <Route path="/dogshow/:id" element={<DogShow dogs={mockDogs} />} />
         </Routes>
       </MemoryRouter>
     )
+
     mockDogs.forEach((dog) => {
-      const dogName = screen.getByRole("heading", {
-        name: /spike/i
+      const dogName = screen.getByRole('heading', {
+        name: /spike/i,
       })
-      expect(screen.getByText(/spike/i)).toBeInTheDocument("Spike")
+      expect(screen.getByRole('heading', { name: /spike/i })).toHaveTextContent('Spike');
     })
   })
 })
-
