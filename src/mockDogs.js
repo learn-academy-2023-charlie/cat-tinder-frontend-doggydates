@@ -6,7 +6,7 @@ const dogs = [
       breed: "Pitbull",
       sex: "M",
       image:
-        "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        "https://c1.wallpaperflare.com/preview/614/813/130/pit-bull-dog-pitbull-valentine.jpg"
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ const dogs = [
       breed: "German Shepard",
       sex: "F",
       image:
-        "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80"
+        "https://www.dogbreedinfo.com/images32/GermanShepherdAdultDogLayInGrassOutside.jpg"
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const dogs = [
       breed: "Frenchie",
       sex: "M",
       image:
-        "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        "https://frenchiejourney.com/wp-content/uploads/2022/03/An-Essential-Guide-To-Adult-French-Bulldogs.jpg"
     }
   ]
   export default dogs
