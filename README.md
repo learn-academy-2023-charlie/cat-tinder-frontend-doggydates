@@ -76,3 +76,55 @@ Watch Usage
     </Button>
   </CardBody>
 </Card>
+
+***
+import React from "react"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from "reactstrap"
+import { NavLink } from "react-router-dom"
+
+const DogShow = ({ dogs }) => {
+  console.log(dogs)
+  const { id } = useParams()
+    let currentDog = dogs?.find((dog) => {
+      return dog.id === +id
+    })
+  return(
+    <main>
+      {currentDog && (
+          <Card
+            style={{
+              width: '18rem'
+            }}
+          >
+          <img
+            alt={`profile of a dog named ${dog.name}`}
+            src={dog.image}
+          />
+            <CardBody>
+              <CardTitle tag="h5">
+                {dog.name}
+              </CardTitle>
+              <CardSubtitle
+                className="mb-2 text-muted"
+                tag="h6"
+              >
+                {dog.sex}
+              </CardSubtitle>
+              <CardText>
+                {dog.breed}
+                {dog.age}
+              </CardText>
+              <Button>
+                <NavLink to={`/dogshow/${dog.id}`}>
+                  Click to view {dog.name}
+                </NavLink>
+              </Button>
+            </CardBody>
+          </Card>
+        )
+      })}
+    </main>
+  )
+}
+
+export default DogIndex
