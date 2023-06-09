@@ -98,8 +98,26 @@ const DogNew = ({createDog}) => {
             />
           </Col>
         </FormGroup>
-        
-
+        <FormGroup row>
+          <Label
+            for="dog-image"
+          >
+            Enter Dog Image
+          </Label>
+          <Col sm={10}>
+            <Input
+              id="dog-image"
+              name="image"
+              placeholder="Dog image"
+              type="text"
+              onChange={handleChange} 
+              value={newDog.image}
+            />
+          </Col>
+        </FormGroup>
+        <Button onClick={handleClick} name="submit">
+          Submit
+        </Button>
       </Form>
     </>
   )
