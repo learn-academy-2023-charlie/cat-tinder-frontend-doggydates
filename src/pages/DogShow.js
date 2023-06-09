@@ -23,8 +23,8 @@ const DogShow = ({ dogs }) => {
             src={currentDog.image}
           />
             <CardBody>
-              <CardTitle tag="h5">
-                {currentDog.name}
+              <CardTitle tag="h5" alt={currentDog.name}>
+                {currentDog.name} 
               </CardTitle>
               <CardSubtitle
                 className="mb-2 text-muted"

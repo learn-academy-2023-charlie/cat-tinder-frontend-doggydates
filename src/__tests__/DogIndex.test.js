@@ -10,11 +10,13 @@ describe('<DogIndex />', () => {
         <DogIndex dogs={mockDogs}/>
       </BrowserRouter>
     )
+    screen.logTestingPlaygroundURL()
     mockDogs.forEach((dog) => {
-      const altText = screen.getByRole('img')
+      const altText = screen.getAllByAltText(/profile of/i)
       screen.debug(altText[0])
       expect(altText[0]).toBeInTheDocument()
     })
   })
 
 })
+

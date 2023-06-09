@@ -128,3 +128,16 @@ const DogShow = ({ dogs }) => {
 }
 
 export default DogIndex
+
+DogShow.test.js
+ PASS  src/__tests__/DogShow.test.js
+  <DogShow />
+    ✓ renders a name (33 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.388 s, estimated 1 s
+Ran all test suites matching /src\/__tests__\/DogShow.test.js/i.
+
+Watch Usage: Press w to show more.
