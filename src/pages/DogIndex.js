@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 const DogIndex = ({ dogs }) => {
   console.log(dogs)
   return(
-    <main>
+    <main id="dog-index-card">
       {dogs.map((dog, index) => {
         return (
           <Card
@@ -31,8 +31,8 @@ const DogIndex = ({ dogs }) => {
               <CardText>
                 Some quick example text to build on the card title and make up the bulk of the card‘s content.
               </CardText>
-              <Button>
-                <NavLink to={`/dogshow/${dog.id}`}>
+              <Button id="card-button">
+                <NavLink to={`/dogshow/${dog.id}`} id="nav-link">
                   Click to view {dog.name}
                 </NavLink>
               </Button>
