@@ -10,13 +10,16 @@ const DogIndex = ({ dogs }) => {
         return (
           <Card
             style={{
-              width: '18rem'
+              width: '18rem',
+              height: '40rem'
             }}
             key={index}
           >
           <img
+            class="dog-image"
             alt={`profile of a dog named ${dog.name}`}
             src={dog.image}
+            
           />
             <CardBody>
               <CardTitle tag="h5">
