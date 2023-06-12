@@ -6,7 +6,7 @@ const DogIndex = ({ dogs }) => {
   console.log(dogs)
   return(
     <main id="dog-index-card">
-      {dogs.map((dog, index) => {
+      {dogs?.map((dog, index) => {
         return (
           <Card
             style={{
@@ -16,7 +16,7 @@ const DogIndex = ({ dogs }) => {
             key={index}
           >
           <img
-            class="dog-image"
+            className="dog-image"
             alt={`profile of a dog named ${dog.name}`}
             src={dog.image}
             
