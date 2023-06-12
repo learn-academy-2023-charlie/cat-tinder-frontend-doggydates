@@ -24,7 +24,7 @@ const dogs = [
       breed: "Frenchie",
       sex: "M",
       image:
-        "https://frenchiejourney.com/wp-content/uploads/2022/03/An-Essential-Guide-To-Adult-French-Bulldogs.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIC9_b61UAFU1xv-xIKFuEuvYiC9YDyk8KCg&usqp=CAU"
     }
   ]
   export default dogs

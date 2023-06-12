@@ -11,7 +11,7 @@ const DogShow = ({ dogs }) => {
     })
     console.log(currentDog)
   return(
-    <main>
+    <main id="dog-index-card">
       {currentDog && (
           <Card
             style={{

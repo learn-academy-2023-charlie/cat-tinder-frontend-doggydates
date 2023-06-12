@@ -6,17 +6,20 @@ const DogIndex = ({ dogs }) => {
   console.log(dogs)
   return(
     <main id="dog-index-card">
-      {dogs.map((dog, index) => {
+      {dogs?.map((dog, index) => {
         return (
           <Card
             style={{
-              width: '18rem'
+              width: '18rem',
+              height: '40rem'
             }}
             key={index}
           >
           <img
+            className="dog-image"
             alt={`profile of a dog named ${dog.name}`}
             src={dog.image}
+            
           />
             <CardBody>
               <CardTitle tag="h5">

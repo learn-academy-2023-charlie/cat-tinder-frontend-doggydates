@@ -1,8 +1,7 @@
-import React, {useState} from "react"
+import React, { useState, useEffect } from "react"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import { Routes, Route } from "react-router-dom"
-import mockDogs from "./mockDogs"
 import DogEdit from "./pages/DogEdit"
 import DogIndex from "./pages/DogIndex"
 import DogNew from "./pages/DogNew"
@@ -12,13 +11,33 @@ import NotFound from "./pages/NotFound"
 import "./App.css"
 
 const App = () => {
-  const [dogs, setDogs] = useState(mockDogs)
+  const [dogs, setDogs] = useState([])
   console.log(dogs)
 
-  const createDog = (createdDog) => {
-    console.log("my created dog", createdDog)
+  useEffect(() => {
+    readDog()
+  }, [])
+  const readDog = () => {
+   fetch("http://localhost:3000/dogs")
+     .then((response) => response.json())
+     .then((payload) => {
+      setDogs(payload)
+    })
+     .catch(error => console.log(error))
   }
 
+  const createDog = (createdDog) => {
+    fetch("http://localhost:3000/dog", {
+      body: JSON.stringify(createdDog),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then((payload) => readDog())
+      .catch((errors) => console.log("Dog create errors:", errors))
+   }
   return(
     <>
       <Header />
