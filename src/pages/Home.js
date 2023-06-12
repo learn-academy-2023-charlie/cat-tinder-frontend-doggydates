@@ -57,7 +57,7 @@ const Home = () => {
           onExited={() => setAnimating(false)}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
+          <img className="carousel-image" src={item.src} alt={item.altText} />
           <CarouselCaption
             captionHeader={item.caption}
           />
