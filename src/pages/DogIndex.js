@@ -11,7 +11,7 @@ const DogIndex = ({ dogs }) => {
           <Card
             style={{
               width: '18rem',
-              height: '40rem'
+              height: '30rem'
             }}
             key={index}
           >
@@ -31,9 +31,6 @@ const DogIndex = ({ dogs }) => {
               >
                 {dog.sex}
               </CardSubtitle>
-              <CardText>
-                Some quick example text to build on the card title and make up the bulk of the card‘s content.
-              </CardText>
               <Button id="card-button">
                 <NavLink to={`/dogshow/${dog.id}`} id="nav-link">
                   Click to view {dog.name}

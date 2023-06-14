@@ -21,9 +21,6 @@ const Header = () => {
             <NavItem>
               <NavLink href="/dognew">Join the Pack</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="/dogedit">Update a dog</NavLink>
-            </NavItem>
           </Nav>
          </div>
         <NavbarText></NavbarText>

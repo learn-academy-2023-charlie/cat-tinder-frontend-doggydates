@@ -8,8 +8,8 @@ import {
 
 const Footer = () => {
   return(
-    <div>
-      <Navbar className="my-2" color="danger" dark >
+    <div className="footer-container">
+      <Navbar className="my-2" color="danger" dark fixed="bottom">
         <NavbarBrand href="/">Doggy Dates</NavbarBrand>
          <Nav className="me-auto" navbar>
          </Nav>
