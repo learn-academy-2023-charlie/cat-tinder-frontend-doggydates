@@ -12,7 +12,7 @@ import "./App.css"
 
 const App = () => {
   const [dogs, setDogs] = useState([])
-  console.log(dogs)
+  // console.log(dogs)
 
   useEffect(() => {
     readDog()
@@ -38,6 +38,34 @@ const App = () => {
       .then((payload) => readDog())
       .catch((errors) => console.log("Dog create errors:", errors))
    }
+
+   useEffect(() => {
+    fetchDogs();
+  }, []);
+
+  const fetchDogs = () => {
+    fetch("http://localhost:3000/dogs")
+      .then((response) => response.json())
+      .then((data) => {
+        setDogs(data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const handleUpdateDog = (dogId, updatedDog) => {
+    fetch(`http://localhost:3000/dogs/${dogId}`, {
+      body: JSON.stringify(updatedDog),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then((response) => response.json())
+      .then(() => fetchDogs())
+      .catch((error) => console.log("Dog update errors:", error));
+  };
+
+
   return(
     <>
       <Header />
@@ -45,11 +73,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dogindex" element={<DogIndex dogs={dogs} />} />
-        <Route path="/dogshow/:id" element={<DogShow dogs={dogs} />} />
+        <Route path="/dogshow/:id" element={<DogShow dogs={dogs} handleUpdateDog={handleUpdateDog} />} />
         <Route path="/dognew" element={<DogNew createDog={createDog} />} />
-        <Route path="/dogedit" element={<DogEdit />} />
+        <Route path="/dogedit/:id" element={<DogEdit dogs={dogs} handleUpdateDog={handleUpdateDog} />}
+/>
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      
       <Footer />
 
     </>

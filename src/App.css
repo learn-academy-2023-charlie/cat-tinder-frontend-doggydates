@@ -9,7 +9,15 @@
 .notFoundPage {
   text-align: center;
 }
-
+#headerlinks {
+  display: flex; 
+  flex-direction: row;
+   justify-content:space-between; 
+  gap: 0px 20px; 
+  align-items: stretch; 
+  justify-content: flex-start; 
+  flex-wrap: wrap;
+}
 #home-page{
   justify-content: center;
   display: flex;
@@ -52,10 +60,22 @@
   color: aliceblue;
 }
 #links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  /* align-items: self-start; */
+  gap: 0px 40px;
+  align-content: flex-start;
+  align-self: flex-start;
+}
+#links {
   color: azure;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  /* align-items: self-start; */
   gap: 0px 40px;
   align-content: flex-start;
   align-self: flex-start;
