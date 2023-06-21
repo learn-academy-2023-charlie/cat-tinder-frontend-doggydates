@@ -1,8 +1,9 @@
 import React from "react"
 import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from "reactstrap"
 import { NavLink } from "react-router-dom"
+import DogShow from "./DogShow";
 
-const DogIndex = ({ dogs }) => {
+const DogIndex = ({ dogs, handleUpdateDog }) => {
   console.log(dogs)
   return(
     <main id="dog-index-card">
@@ -32,7 +33,7 @@ const DogIndex = ({ dogs }) => {
                 {dog.sex}
               </CardSubtitle>
               <CardText>
-                Some quick example text to build on the card title and make up the bulk of the card‘s content.
+              <DogShow key={dog.id} dog={dog} handleUpdateDog={handleUpdateDog} />
               </CardText>
               <Button id="card-button">
                 <NavLink to={`/dogshow/${dog.id}`} id="nav-link">
