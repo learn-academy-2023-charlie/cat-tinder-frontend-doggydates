@@ -27,7 +27,7 @@ const App = () => {
   }
 
   const createDog = (createdDog) => {
-    fetch("http://localhost:3000/dog", {
+    fetch("http://localhost:3000/dogs", {
       body: JSON.stringify(createdDog),
       headers: {
         "Content-Type": "application/json"

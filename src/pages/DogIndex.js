@@ -12,7 +12,7 @@ const DogIndex = ({ dogs, handleUpdateDog }) => {
           <Card
             style={{
               width: '18rem',
-              height: '40rem'
+              height: '30rem'
             }}
             key={index}
           >
